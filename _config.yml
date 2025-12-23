@@ -120,7 +120,7 @@ permalink_pinyin:
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repository: git@github.com:gitwwx/gitwwx.github.io.git
+  repository: https://github.com/gitwwx/gitwwx.github.io.git
   branch: main
 
 # Theme Customize
