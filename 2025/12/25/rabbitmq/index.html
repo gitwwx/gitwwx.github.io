@@ -4,11 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="linux常用命令, wwx&#39;s BLOG">
-    <meta name="description" content="1，mkdir命令要在shell中创建文件夹，可以使用mkdir命令。只需指定新文件夹的名称，确保它不存在，然后就可以开始了。
-例如，要创建一个保存所有图像的目录，只需键入：
-mkdir images&amp;#x2F;
-2，chmod命令允许您快">
+    <meta name="keywords" content="Window下安装RabbitMQ, wwx&#39;s BLOG">
+    <meta name="description" content="安装步骤第一步：下载rabbitmq官网下载地址: https://www.rabbitmq.com/docs/install-windows
+第二步: 下载ErlangRabbitMQ需要安装64位受支持的Erlang版本 才能在Wind">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +18,7 @@ mkdir images&amp;#x2F;
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>linux常用命令 | wwx&#39;s BLOG</title>
+    <title>Window下安装RabbitMQ | wwx&#39;s BLOG</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -274,12 +272,12 @@ mkdir images&amp;#x2F;
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">linux常用命令</h1>
+                    <h1 class="description center-align post-title">Window下安装RabbitMQ</h1>
                 </div>
             </div>
         </div>
@@ -303,8 +301,8 @@ mkdir images&amp;#x2F;
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Linux/">
-                                <span class="chip bg-color">Linux</span>
+                            <a href="/tags/RabbitMQ/">
+                                <span class="chip bg-color">RabbitMQ</span>
                             </a>
                         
                     </div>
@@ -319,7 +317,7 @@ mkdir images&amp;#x2F;
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-10-19
+                    2025-12-25
                 </div>
                 
 
@@ -343,46 +341,37 @@ mkdir images&amp;#x2F;
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h5 id="1，mkdir命令"><a href="#1，mkdir命令" class="headerlink" title="1，mkdir命令"></a>1，mkdir命令</h5><p>要在shell中创建文件夹，可以使用mkdir命令。只需指定新文件夹的名称，确保它不存在，然后就可以开始了。</p>
-<p>例如，要创建一个保存所有图像的目录，只需键入：</p>
-<pre class="line-numbers language-none"><code class="language-none">mkdir images&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h5 id="2，chmod命令"><a href="#2，chmod命令" class="headerlink" title="2，chmod命令"></a>2，chmod命令</h5><p>允许您快速更改文件的模式（权限）。它有很多可用的选项。</p>
-<p>文件的基本权限包括：</p>
-<p>r (只读)<br>w (写入)<br>x (执行)<br>chmod最常见的用例之一是使文件可由用户执行。为此，请键入chmod和标志+x，然后键入要修改其权限的文件：</p>
-<pre class="line-numbers language-none"><code class="language-none">chmod +x script<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h5 id="3，sudo-命令"><a href="#3，sudo-命令" class="headerlink" title="3，sudo 命令"></a>3，sudo 命令</h5><p>此命令代表“超级用户do”，它允许您在运行特定命令时充当超级用户或根用户。这就是Linux如何保护自己，防止用户意外修改机器的文件系统或安装不合适的软件包。</p>
-<p>Sudo通常用于安装软件或编辑用户主目录以外的文件：</p>
-<pre class="line-numbers language-none"><code class="language-none">sudo apt install gimp
-sudo cd &#x2F;root&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h5 id="4，unzip-命令"><a href="#4，unzip-命令" class="headerlink" title="4，unzip 命令"></a>4，unzip 命令</h5><p>unzip命令允许您从终端提取.zip文件的内容。同样，默认情况下可能不会安装此软件包，因此请确保使用package管理器安装它。</p>
-<p>下面命令行，指正在解压一个包含图像的.zip文件：</p>
-<pre class="line-numbers language-none"><code class="language-none">unzip images.zip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h5 id="5，echo-命令"><a href="#5，echo-命令" class="headerlink" title="5，echo 命令"></a>5，echo 命令</h5><p>echo命令在终端中显示定义的文本-就这么简单：</p>
-<pre class="line-numbers language-none"><code class="language-none">echo &quot;Cool message&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>它的主要用途是在这些消息中打印环境变量：</p>
-<pre class="line-numbers language-none"><code class="language-none">echo &quot;Hey $USER&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h5 id="6，cat-命令"><a href="#6，cat-命令" class="headerlink" title="6，cat 命令"></a>6，cat 命令</h5><p>cat 是“concatenate”的缩写，用于直接从终端创建、查看和连接文件。它主要用于在不打开图形文本编辑器的情况下预览文件：</p>
-<pre class="line-numbers language-none"><code class="language-none">cat long_text_file.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h5 id="7，ps-命令"><a href="#7，ps-命令" class="headerlink" title="7，ps 命令"></a>7，ps 命令</h5><p>使用ps，您可以查看当前shell会话正在运行的进程。它打印有关正在运行的程序的有用信息，如进程ID、TTY（电传打字机）、时间和命令名。</p>
-<h5 id="8，vim-命令"><a href="#8，vim-命令" class="headerlink" title="8，vim 命令"></a>8，vim 命令</h5><p>vim 是一个免费的开源终端文本编辑器，从90年代开始使用。它允许您使用高效的键绑定编辑纯文本文件。</p>
-<h5 id="9，tail-命令"><a href="#9，tail-命令" class="headerlink" title="9，tail 命令"></a>9，tail 命令</h5><p>与cat类似，tail打印文件内容时有一个主要警告：它只输出最后几行。默认情况下，它打印最后10行，但您可以使用-n修改该数字。</p>
-<p>例如，要打印大型文本文件的最后几行，可以使用：</p>
-<pre class="line-numbers language-none"><code class="language-none">tail long.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h5 id="10，head-命令"><a href="#10，head-命令" class="headerlink" title="10，head 命令"></a>10，head 命令</h5><p>这是对tail命令的补充。head输出文本文件的前10行，但您可以使用-n标志设置要显示的任意行数：</p>
-<pre class="line-numbers language-none"><code class="language-none">head long.txt
-head -n 5 long.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h5 id="11，grep-命令"><a href="#11，grep-命令" class="headerlink" title="11，grep 命令"></a>11，grep 命令</h5><p>Grep是处理文本文件的最强大的工具之一。它搜索与正则表达式匹配的行并打印它们：</p>
-<pre class="line-numbers language-none"><code class="language-none">grep &quot;linux&quot; long.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>您可以使用-c标志计算与给定条件匹配的次数：</p>
-<pre class="line-numbers language-none"><code class="language-none">grep -c &quot;linux&quot; long.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h5 id="12，rm命令"><a href="#12，rm命令" class="headerlink" title="12，rm命令"></a>12，rm命令</h5><p>既然您已经知道了如何复制文件，那么了解如何删除它们将很有帮助。</p>
-<p>您可以使用rm命令删除文件和目录。但在使用时要小心，因为用这种方法恢复删除的文件非常困难（但并非不可能）。</p>
-<p>要删除常规文件，请键入：</p>
-<pre class="line-numbers language-none"><code class="language-none">rm file_to_copy.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>如果要删除空目录，可以使用递归（-r）标志：</p>
-<pre class="line-numbers language-none"><code class="language-none">rm -r dir_to_remove&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>另一方面，要删除包含内容的目录，需要使用force（-f）和recursive标志：</p>
-<pre class="line-numbers language-none"><code class="language-none">rm -rf dir_with_content_to_remove&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h3 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><h4 id="第一步：下载rabbitmq"><a href="#第一步：下载rabbitmq" class="headerlink" title="第一步：下载rabbitmq"></a>第一步：下载rabbitmq</h4><p>官网下载地址: <a target="_blank" rel="noopener" href="https://www.rabbitmq.com/docs/install-windows">https://www.rabbitmq.com/docs/install-windows</a><br><img src="/medias/images/rabbitmq1.png" alt="官网地址"></p>
+<h4 id="第二步-下载Erlang"><a href="#第二步-下载Erlang" class="headerlink" title="第二步: 下载Erlang"></a>第二步: 下载Erlang</h4><p>RabbitMQ需要安装64位受支持的Erlang版本 才能在Windows上运行。<br><img src="/medias/images/rabbitmq2.png" alt="下载页面"></p>
+<h4 id="第三步：点击安装"><a href="#第三步：点击安装" class="headerlink" title="第三步：点击安装"></a>第三步：点击安装</h4><h5 id="1-先安装Erlang"><a href="#1-先安装Erlang" class="headerlink" title="1.先安装Erlang"></a>1.先安装Erlang</h5><ul>
+<li>运行程序安装</li>
+<li>配置环境变量</li>
+</ul>
+<p>配置ERLANG_HOME环境变量，其值指向erlang的安装目录（安装时可选择）<br><br>%ERLANG_HOME%\bin 加入到Path中</p>
+<p>验证安装 cmd窗口 输入 </p>
+<pre class="line-numbers language-none"><code class="language-none">erl -version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h5 id="2-安装rabbitmq-server"><a href="#2-安装rabbitmq-server" class="headerlink" title="2.安装rabbitmq-server"></a>2.安装rabbitmq-server</h5><p>注意，安装的路径都不要包含中文<br></p>
+<ul>
+<li>配置环境变量</li>
+</ul>
+<p>新建RABBITMQ_SERVER,指向安装路径，增加rabbitmq变量至path，%RABBITMQ_SERVER%\sbin</p>
+<p>验证是否安装成功 运行以下命令 </p>
+<pre class="line-numbers language-none"><code class="language-none">rabbitmqctl status<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h5 id="3-报错解决"><a href="#3-报错解决" class="headerlink" title="3.报错解决"></a>3.报错解决</h5><p>Error: unable to perform an operation on node ‘rabbit@DESKTOP-63FTMEF’. Please see diagnostics information and suggestions below.</p>
+<ul>
+<li>找到：C:\Windows\System32\config\systemprofile .erlang.cookie 这个文件和 C:\Users{用户名} .erlang.cookie 两个的值不一样 设置一样即可</li>
+<li>重启 RabbitMQ 服务（Windows + R -&gt; services.msc -&gt; 找到 RabbitMQ -&gt; 右击重启）</li>
+</ul>
+<h5 id="4-扩展"><a href="#4-扩展" class="headerlink" title="4.扩展"></a>4.扩展</h5><p>切换到安装目录，安装可视化插件：</p>
+<pre class="line-numbers language-none"><code class="language-none">rabbitmq-plugins.bat enable rabbitmq_management<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>浏览器中 <a target="_blank" rel="noopener" href="http://localhost:15672/">http://localhost:15672</a></p>
+<ul>
+<li>用户和密码输入：guest,guest 进入rabbitMQ管理控制台</li>
+</ul>
+
                 
             </div>
             <hr/>
@@ -408,7 +397,7 @@ head -n 5 long.txt<span aria-hidden="true" class="line-numbers-rows"><span></spa
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://gitwwx.github.io/2024/10/19/xin-de-wen-zhang-2/">https://gitwwx.github.io/2024/10/19/xin-de-wen-zhang-2/</a>
+                    <a href="https://gitwwx.github.io/2025/12/25/rabbitmq/">https://gitwwx.github.io/2025/12/25/rabbitmq/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -446,8 +435,8 @@ head -n 5 long.txt<span aria-hidden="true" class="line-numbers-rows"><span></spa
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Linux/">
-                                    <span class="chip bg-color">Linux</span>
+                                <a href="/tags/RabbitMQ/">
+                                    <span class="chip bg-color">RabbitMQ</span>
                                 </a>
                             
                         </div>
@@ -530,13 +519,13 @@ head -n 5 long.txt<span aria-hidden="true" class="line-numbers-rows"><span></spa
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2024/10/19/xin-de-wen-zhang-3/">
+                <a href="/2025/12/25/nacos/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="linux安装Java环境并部署发布springboot项目">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Nacos Server 下载与启动教程">
                         
-                        <span class="card-title">linux安装Java环境并部署发布springboot项目</span>
+                        <span class="card-title">Nacos Server 下载与启动教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -547,7 +536,7 @@ head -n 5 long.txt<span aria-hidden="true" class="line-numbers-rows"><span></spa
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-10-19
+                            <i class="far fa-clock fa-fw icon-date"></i>2025-12-25
                         </span>
                         <span class="publish-author">
                             
@@ -560,12 +549,8 @@ head -n 5 long.txt<span aria-hidden="true" class="line-numbers-rows"><span></spa
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                    <a href="/tags/Spring/">
-                        <span class="chip bg-color">Spring</span>
+                    <a href="/tags/Nacos/">
+                        <span class="chip bg-color">Nacos</span>
                     </a>
                     
                 </div>
@@ -579,13 +564,13 @@ head -n 5 long.txt<span aria-hidden="true" class="line-numbers-rows"><span></spa
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/10/19/xin-de-wen-zhang/">
+                <a href="/2025/12/22/sc-demo/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Java修改jpg图片dpi">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="0-1搭建SpringCloud服务">
                         
-                        <span class="card-title">Java修改jpg图片dpi</span>
+                        <span class="card-title">0-1搭建SpringCloud服务</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -596,7 +581,7 @@ head -n 5 long.txt<span aria-hidden="true" class="line-numbers-rows"><span></spa
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-10-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-12-22
                             </span>
                         <span class="publish-author">
                             
@@ -613,8 +598,12 @@ head -n 5 long.txt<span aria-hidden="true" class="line-numbers-rows"><span></spa
                         <span class="chip bg-color">Java</span>
                     </a>
                     
-                    <a href="/tags/dpi/">
-                        <span class="chip bg-color">dpi</span>
+                    <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">
+                        <span class="chip bg-color">微服务</span>
+                    </a>
+                    
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
                     </a>
                     
                 </div>

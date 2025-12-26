@@ -4,12 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="linux安装Java环境并部署发布springboot项目, wwx&#39;s BLOG">
-    <meta name="description" content="部署java开发环境：系统环境 腾讯云OpenCloudOS8.6
-1，新建目录（非必须，自行选择）tmp存放临时安装包
-mkdir -p &amp;#x2F;data&amp;#x2F;tmp
-#service存放软件环境
-mkdir -p &amp;#x2F;">
+    <meta name="keywords" content="Nacos Server 下载与启动教程, wwx&#39;s BLOG">
+    <meta name="description" content="安装步骤第一步：下载Nacos Server官网下载地址: 🔗 https://github.com/alibaba/nacos选择最新稳定版本（注意jdk版本适配），下载对应系统的压缩包：
+
+Windows：nacos-server-x">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +19,7 @@ mkdir -p &amp;#x2F;">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>linux安装Java环境并部署发布springboot项目 | wwx&#39;s BLOG</title>
+    <title>Nacos Server 下载与启动教程 | wwx&#39;s BLOG</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -275,12 +273,12 @@ mkdir -p &amp;#x2F;">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">linux安装Java环境并部署发布springboot项目</h1>
+                    <h1 class="description center-align post-title">Nacos Server 下载与启动教程</h1>
                 </div>
             </div>
         </div>
@@ -304,12 +302,8 @@ mkdir -p &amp;#x2F;">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java/">
-                                <span class="chip bg-color">Java</span>
-                            </a>
-                        
-                            <a href="/tags/Spring/">
-                                <span class="chip bg-color">Spring</span>
+                            <a href="/tags/Nacos/">
+                                <span class="chip bg-color">Nacos</span>
                             </a>
                         
                     </div>
@@ -324,7 +318,7 @@ mkdir -p &amp;#x2F;">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-10-19
+                    2025-12-25
                 </div>
                 
 
@@ -348,141 +342,54 @@ mkdir -p &amp;#x2F;">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>部署java开发环境：<br>系统环境 腾讯云OpenCloudOS8.6</p>
-<h5 id="1，新建目录（非必须，自行选择）"><a href="#1，新建目录（非必须，自行选择）" class="headerlink" title="1，新建目录（非必须，自行选择）"></a>1，新建目录（非必须，自行选择）</h5><p>tmp存放临时安装包</p>
-<pre class="line-numbers language-none"><code class="language-none">mkdir -p &#x2F;data&#x2F;tmp<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>#service存放软件环境</p>
-<pre class="line-numbers language-none"><code class="language-none">mkdir -p &#x2F;data&#x2F;service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>gitee存放代码版本控制库</p>
-<pre class="line-numbers language-none"><code class="language-none">mkdir -p &#x2F;data&#x2F;gitee<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h5 id="2，配置jdk环境"><a href="#2，配置jdk环境" class="headerlink" title="2，配置jdk环境"></a>2，配置jdk环境</h5><p>进入安装包目录</p>
-<pre class="line-numbers language-none"><code class="language-none">cd &#x2F;data&#x2F;tmp<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>xshell非常好用，有时候想在windows和Linux上下载或上传文件可以通过配置然后使用rz和sz命令实现</p>
-<p>安装工具lrzsz通过yum install lrzsz实现<br>上传文件，通过rz实现<br>下载文件,通过sz实现</p>
-<p>解压</p>
-<pre class="line-numbers language-none"><code class="language-none">tar -zxvf jdk-8u141-linux-x64.tar.gz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>把解压出来的文件夹转移到统一的地方</p>
-<pre class="line-numbers language-none"><code class="language-none">mv &#x2F;data&#x2F;tmp&#x2F;jdk1.8.0_141 &#x2F;data&#x2F;service&#x2F;jdk1.8.0_141<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>修改环境变量&#x2F;etc&#x2F;profile，JAVA_HOME修改为自己的jdk路径。</p>
-<pre class="line-numbers language-none"><code class="language-none">vim &#x2F;etc&#x2F;profile
-export JAVA_HOME&#x3D;&#x2F;data&#x2F;service&#x2F;jdk1.8.0_141
-export PATH&#x3D;$PATH:$JAVA_HOME&#x2F;bin<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>使环境变量生效</p>
-<pre class="line-numbers language-none"><code class="language-none">source &#x2F;etc&#x2F;profile<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>检查是否配置成功</p>
-<pre class="line-numbers language-none"><code class="language-none">java -version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h5 id="3，配置maven"><a href="#3，配置maven" class="headerlink" title="3，配置maven"></a>3，配置maven</h5><p>进入安装包目录，解压</p>
-<pre class="line-numbers language-none"><code class="language-none">cd &#x2F;data&#x2F;tmp
-tar -zxvf apache-maven-3.6.3-bin.tar.gz
-mv apache-maven-3.6.3 &#x2F;data&#x2F;service&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>修改环境变量&#x2F;etc&#x2F;profile，MAVEN_HOME修改为自己的路径。</p>
-<pre class="line-numbers language-none"><code class="language-none">export MAVEN_HOME&#x3D;&#x2F;data&#x2F;service&#x2F;apache-maven-3.6.3
-export PATH&#x3D;$PATH:$MAVEN_HOME&#x2F;bin<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>使环境变量生效</p>
-<pre class="line-numbers language-none"><code class="language-none">source &#x2F;etc&#x2F;profile<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>检查是否配置成功</p>
-<pre class="line-numbers language-none"><code class="language-none">mvn -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>配置settings.xml，添加本地仓库地址 &#x2F;usr&#x2F;local&#x2F;maven&#x2F;repository</p>
-<pre class="line-numbers language-none"><code class="language-none">mkdir -p &#x2F;usr&#x2F;local&#x2F;maven&#x2F;repository<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h5 id="4，安装git环境"><a href="#4，安装git环境" class="headerlink" title="4，安装git环境"></a>4，安装git环境</h5><p>通过yum安装，本方法最简单。但是无法控制安装的版本</p>
-<pre class="line-numbers language-none"><code class="language-none">yum -y install git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>检查是否配置成功</p>
-<pre class="line-numbers language-none"><code class="language-none">git --version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>生成sshkey</p>
-<pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa -C &quot;xx@xx.com&quot; &#x2F;&#x2F;（三次回车，可具体个人自定义配置）
-cat ~&#x2F;.ssh&#x2F;id_rsa.pub<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h5 id="5，安装docker"><a href="#5，安装docker" class="headerlink" title="5，安装docker"></a>5，安装docker</h5><p>卸载旧版本</p>
-<pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">sudo yum remove docker \
-                docker-client \
-                docker-client-latest \
-                docker-common \
-                docker-latest \
-                docker-latest-logrotate \
-                docker-logrotate \
-                docker-engine<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>设置仓库，安装所需的软件包</p>
-<pre class="line-numbers language-none"><code class="language-none">sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+                <h3 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><h4 id="第一步：下载Nacos-Server"><a href="#第一步：下载Nacos-Server" class="headerlink" title="第一步：下载Nacos Server"></a>第一步：下载Nacos Server</h4><p>官网下载地址: 🔗 <a target="_blank" rel="noopener" href="https://github.com/alibaba/nacos">https://github.com/alibaba/nacos</a><br>选择最新稳定版本（注意jdk版本适配），下载对应系统的压缩包：</p>
+<ul>
+<li>Windows：nacos-server-x.x.x.zip</li>
+<li>Linux&#x2F;macOS：nacos-server-x.x.x.tar.gz</li>
+</ul>
+<h4 id="第二步-解压文件"><a href="#第二步-解压文件" class="headerlink" title="第二步: 解压文件"></a>第二步: 解压文件</h4><pre class="line-numbers language-none"><code class="language-none"># Linux&#x2F;macOS
+tar -zxvf nacos-server-x.x.x.tar.gz
 
-yum install https:&#x2F;&#x2F;download.docker.com&#x2F;linux&#x2F;fedora&#x2F;30&#x2F;x86_64&#x2F;stable&#x2F;Packages&#x2F;containerd.io-1.2.6-3.3.fc30.x86_64.rpm<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>使用官方源地址（比较慢）</p>
-<pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">sudo yum-config-manager \
-  --add-repo \
-  http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;docker-ce&#x2F;linux&#x2F;centos&#x2F;docker-ce.repo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>安装 Docker Engine-Community</p>
-<pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">sudo yum install docker-ce docker-ce-cli containerd.io<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>启动 Docker</p>
-<pre class="line-numbers language-angular2html" data-language="angular2html"><code class="language-angular2html">sudo systemctl start docker<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+# Windows
+直接右键解压<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="6，安装mysql（可使用云数据库，自行选择）"><a href="#6，安装mysql（可使用云数据库，自行选择）" class="headerlink" title="6，安装mysql（可使用云数据库，自行选择）"></a>6，安装mysql（可使用云数据库，自行选择）</h5><p>在Docker中安装MySQL。<br>查看可用的 MySQL 版本</p>
-<pre class="line-numbers language-none"><code class="language-none">docker search mysql<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>拉取5.7版本</p>
-<pre class="line-numbers language-none"><code class="language-none">docker pull mysql:5.7<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>使用以下命令来查看是否已安装了 mysql</p>
-<pre class="line-numbers language-none"><code class="language-none">docker images<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>创建配置文件目录</p>
-<pre class="line-numbers language-none"><code class="language-none">mkdir -p &#x2F;data&#x2F;docker&#x2F;mysql&#x2F;conf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>进入配置文件目录，添加一个配置文件</p>
-<pre class="line-numbers language-none"><code class="language-none">vim my.cnf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>启动镜像</p>
-<pre class="line-numbers language-none"><code class="language-none">docker run -p 3306:3306 --name mysql -v &#x2F;data&#x2F;docker&#x2F;mysql&#x2F;conf:&#x2F;etc&#x2F;mysql&#x2F;conf.d -e MYSQL_ROOT_PASSWORD&#x3D;dasqW -d mysql:5.7<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>进入docker容器设置env LANG&#x3D;C.UTF-8</p>
-<pre class="line-numbers language-none"><code class="language-none">docker exec -it mysql env LANG&#x3D;C.UTF-8 bash<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>ctrl + d 退出 docker bash<br>外部连接需要腾讯云开放3306端口</p>
-<h5 id="7，安装redis"><a href="#7，安装redis" class="headerlink" title="7，安装redis"></a>7，安装redis</h5><pre class="line-numbers language-none"><code class="language-none">docker pull redis:latest
-docker run -itd --name redis-test -p 6379:6379 redis<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h5 id="8，安装node"><a href="#8，安装node" class="headerlink" title="8，安装node"></a>8，安装node</h5><pre class="line-numbers language-tar" data-language="tar"><div class="caption"><span>xf node-v14.15.4-linux-x64.tar.xz</span><a href="//">解压</a></div><code class="language-tar">cd node-v14.15.4-linux-x64&#x2F;                 &#x2F;&#x2F; 进入解压目录
-.&#x2F;bin&#x2F;node -v                               &#x2F;&#x2F; 执行<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>node命令 查看版本<br>解压文件的 bin 目录底下包含了 node、npm 等命令，我们可以使用 ln 命令来设置软连接</p>
-<pre class="line-numbers language-none"><code class="language-none">mv &#x2F;data&#x2F;tmp&#x2F;node-v14.15.4-linux-x64 &#x2F;data&#x2F;service&#x2F;
-ln -s &#x2F;data&#x2F;service&#x2F;node-v14.15.4-linux-x64&#x2F;bin&#x2F;npm   &#x2F;usr&#x2F;local&#x2F;bin&#x2F;
-ln -s &#x2F;data&#x2F;service&#x2F;node-v14.15.4-linux-x64&#x2F;bin&#x2F;node   &#x2F;usr&#x2F;local&#x2F;bin&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h5 id="9，安装nginx"><a href="#9，安装nginx" class="headerlink" title="9，安装nginx"></a>9，安装nginx</h5><p>首先安装nginx前置软件</p>
-<pre class="line-numbers language-none"><code class="language-none">yum -y install gcc pcre-devel zlib-devel openssl openssl-devel<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>下载nginx软件安装包</p>
-<pre class="line-numbers language-none"><code class="language-none">cd &#x2F;data&#x2F;tmp
-wget http:&#x2F;&#x2F;nginx.org&#x2F;download&#x2F;nginx-1.19.6.tar.gz
-tar -zxvf nginx-1.19.6.tar.gz
-cd nginx-1.19.6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>设置安装目录为&#x2F;usr&#x2F;local&#x2F;nginx</p>
-<pre class="line-numbers language-none"><code class="language-none">.&#x2F;configure --prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;nginx
-make
-make install<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>启动nginx</p>
-<pre class="line-numbers language-none"><code class="language-none">&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h5 id="10，代码"><a href="#10，代码" class="headerlink" title="10，代码"></a>10，代码</h5><p>新建目录上传代码（安装git的情况直接clone代码即可）<br>&#x2F;data&#x2F;gitee&#x2F;</p>
-<p>解压代码</p>
-<pre class="line-numbers language-none"><code class="language-none">unzip xx.zip <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h5 id="11，打包部署"><a href="#11，打包部署" class="headerlink" title="11，打包部署"></a>11，打包部署</h5><p>cd 项目路径</p>
-<pre class="line-numbers language-none"><code class="language-none">mvn clean package<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>查看jar包 cd 项目&#x2F;target&#x2F;<br>运行</p>
-<pre class="line-numbers language-none"><code class="language-none">mkdir -p &#x2F;data&#x2F;app&#x2F;ruoyi-vue
-cp &#x2F;data&#x2F;gitee&#x2F;RuoYi-Vue&#x2F;ruoyi-admin&#x2F;target&#x2F;ruoyi-admin.jar &#x2F;data&#x2F;app&#x2F;ruoyi-vue&#x2F;ruoyi-admin.jar
-cd &#x2F;data&#x2F;app&#x2F;ruoyi-vue&#x2F;
-nohup java -jar ruoyi-admin.jar &amp;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>前端代码发布<br>cd &#x2F;前端目录</p>
-<pre class="line-numbers language-none"><code class="language-none">npm install
-npm run build:prod
-mkdir &#x2F;data&#x2F;app&#x2F;ruoyi-ui
-mv dist&#x2F;* &#x2F;data&#x2F;app&#x2F;ruoyi-ui&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>把生成好的 dist 文件夹的静态文件发布到你的 nginx 或者静态服务器即可，其中的 index.html 是后台服务的入口页面。</p>
-<pre class="line-numbers language-none"><code class="language-none">vim &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>后台端口8080</p>
-<pre class="line-numbers language-none"><code class="language-none">location &#x2F; &#123;
-    root   &#x2F;data&#x2F;app&#x2F;ruoyi-ui;
-    try_files $uri $uri&#x2F; &#x2F;index.html;
-    index index.html index.htm;
-&#125;
-
-location &#x2F;prod-api&#x2F; &#123;
-    proxy_set_header Host $http_host;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header REMOTE-HOST $remote_addr;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_pass http:&#x2F;&#x2F;localhost:8080&#x2F;;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>重新加载配置文件nginx</p>
-<pre class="line-numbers language-none"><code class="language-none">&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx -s reload<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="启动-Nacos-Server"><a href="#启动-Nacos-Server" class="headerlink" title="启动 Nacos Server"></a>启动 Nacos Server</h3><h5 id="1-单机模式启动（开发环境推荐）"><a href="#1-单机模式启动（开发环境推荐）" class="headerlink" title="1.单机模式启动（开发环境推荐）"></a>1.单机模式启动（开发环境推荐）</h5><p>Linux&#x2F;macOS</p>
+<pre class="line-numbers language-none"><code class="language-none">cd nacos&#x2F;bin
+sh startup.sh -m standalone  # 添加 standalone 参数表示单机模式<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>Windows</p>
+<pre class="line-numbers language-none"><code class="language-none">cd nacos\bin
+.&#x2F;startup.cmd -m standalone<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h5 id="2-集群模式启动（生产环境）"><a href="#2-集群模式启动（生产环境）" class="headerlink" title="2.集群模式启动（生产环境）"></a>2.集群模式启动（生产环境）</h5><p>修改配置文件 conf&#x2F;cluster.conf，添加集群节点IP：</p>
+<pre class="line-numbers language-none"><code class="language-none">192.168.1.101:8848
+192.168.1.102:8848
+192.168.1.103:8848<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>启动每个节点（无需 standalone 参数）</p>
+<pre class="line-numbers language-none"><code class="language-none">sh startup.sh  # Linux&#x2F;macOS
+startup.cmd    # Windows<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="验证启动"><a href="#验证启动" class="headerlink" title="验证启动"></a>验证启动</h3><p>访问控制台<br>浏览器打开：<br>🔗 <a target="_blank" rel="noopener" href="http://localhost:8848/nacos">http://localhost:8848/nacos</a></p>
+<ul>
+<li>默认账号：nacos</li>
+<li>默认密码：nacos</li>
+</ul>
+<p>查看日志</p>
+<pre class="line-numbers language-none"><code class="language-none">tail -f nacos&#x2F;logs&#x2F;start.out  # Linux&#x2F;macOS
+# Windows 直接查看 nacos\logs\start.out 文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="常见问题解决"><a href="#常见问题解决" class="headerlink" title="常见问题解决"></a>常见问题解决</h3><h4 id="1，端口冲突"><a href="#1，端口冲突" class="headerlink" title="1，端口冲突"></a>1，端口冲突</h4><p>修改 conf&#x2F;application.properties 中的端口：</p>
+<pre class="line-numbers language-properties" data-language="properties"><code class="language-properties"><span class="token key attr-name">server.port</span><span class="token punctuation">=</span><span class="token value attr-value">8848  # 默认端口，可改为其他</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="2-启动失败（内存不足）"><a href="#2-启动失败（内存不足）" class="headerlink" title="2.启动失败（内存不足）"></a>2.启动失败（内存不足）</h4><p>调整 JVM 参数（编辑 bin&#x2F;startup.sh 或 startup.cmd）：</p>
+<pre class="line-numbers language-none"><code class="language-none">JAVA_OPT&#x3D;&quot;$&#123;JAVA_OPT&#125; -Xms512m -Xmx512m&quot;  # 根据机器配置调整<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="3-外网访问限制"><a href="#3-外网访问限制" class="headerlink" title="3.外网访问限制"></a>3.外网访问限制</h4><p>修改 conf&#x2F;application.properties：</p>
+<pre class="line-numbers language-properties" data-language="properties"><code class="language-properties"><span class="token key attr-name">nacos.core.auth.enabled</span><span class="token punctuation">=</span><span class="token value attr-value">false  # 关闭鉴权（开发环境）</span>
+<span class="token key attr-name">nacos.inetutils.ip-address</span><span class="token punctuation">=</span><span class="token value attr-value">你的服务器IP  # 绑定外网IP</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="线上环境建议"><a href="#线上环境建议" class="headerlink" title="线上环境建议"></a>线上环境建议</h3><p>数据库持久化（默认使用内嵌 Derby，生产需切 MySQL） </p>
+<ul>
+<li>修改 conf&#x2F;application.properties：<pre class="line-numbers language-properties" data-language="properties"><code class="language-properties"><span class="token key attr-name">spring.datasource.platform</span><span class="token punctuation">=</span><span class="token value attr-value">mysql</span>
+<span class="token key attr-name">db.url.0</span><span class="token punctuation">=</span><span class="token value attr-value">jdbc:mysql://127.0.0.1:3306/nacos?useSSL=false</span>
+<span class="token key attr-name">db.user</span><span class="token punctuation">=</span><span class="token value attr-value">root</span>
+<span class="token key attr-name">db.password</span><span class="token punctuation">=</span><span class="token value attr-value">你的密码</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<h3 id="关闭Nacos-Server"><a href="#关闭Nacos-Server" class="headerlink" title="关闭Nacos Server"></a>关闭Nacos Server</h3><pre class="line-numbers language-none"><code class="language-none">sh shutdown.sh  # Linux&#x2F;macOS
+shutdown.cmd    # Windows<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -508,7 +415,7 @@ location &#x2F;prod-api&#x2F; &#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://gitwwx.github.io/2024/10/19/xin-de-wen-zhang-3/">https://gitwwx.github.io/2024/10/19/xin-de-wen-zhang-3/</a>
+                    <a href="https://gitwwx.github.io/2025/12/25/nacos/">https://gitwwx.github.io/2025/12/25/nacos/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -546,12 +453,8 @@ location &#x2F;prod-api&#x2F; &#123;
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">Java</span>
-                                </a>
-                            
-                                <a href="/tags/Spring/">
-                                    <span class="chip bg-color">Spring</span>
+                                <a href="/tags/Nacos/">
+                                    <span class="chip bg-color">Nacos</span>
                                 </a>
                             
                         </div>
@@ -634,13 +537,13 @@ location &#x2F;prod-api&#x2F; &#123;
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2024/10/19/wemsg/">
+                <a href="/2025/12/26/sc-demo2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="wemsg">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="SpringCloud微服务-Nacos + MQ">
                         
-                        <span class="card-title">wemsg</span>
+                        <span class="card-title">SpringCloud微服务-Nacos + MQ</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -651,7 +554,7 @@ location &#x2F;prod-api&#x2F; &#123;
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-10-19
+                            <i class="far fa-clock fa-fw icon-date"></i>2025-12-26
                         </span>
                         <span class="publish-author">
                             
@@ -664,8 +567,16 @@ location &#x2F;prod-api&#x2F; &#123;
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
+                    <a href="/tags/Nacos/">
+                        <span class="chip bg-color">Nacos</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">
+                        <span class="chip bg-color">微服务</span>
+                    </a>
+                    
+                    <a href="/tags/MQ/">
+                        <span class="chip bg-color">MQ</span>
                     </a>
                     
                 </div>
@@ -679,13 +590,13 @@ location &#x2F;prod-api&#x2F; &#123;
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/10/19/xin-de-wen-zhang-2/">
+                <a href="/2025/12/25/rabbitmq/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="linux常用命令">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Window下安装RabbitMQ">
                         
-                        <span class="card-title">linux常用命令</span>
+                        <span class="card-title">Window下安装RabbitMQ</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -696,7 +607,7 @@ location &#x2F;prod-api&#x2F; &#123;
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-10-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-12-25
                             </span>
                         <span class="publish-author">
                             
@@ -709,8 +620,8 @@ location &#x2F;prod-api&#x2F; &#123;
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/tags/RabbitMQ/">
+                        <span class="chip bg-color">RabbitMQ</span>
                     </a>
                     
                 </div>
