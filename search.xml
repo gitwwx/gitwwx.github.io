@@ -46,25 +46,6 @@
     
     
     <entry>
-      <title>Window下安装RabbitMQ</title>
-      <link href="/2025/12/25/rabbitmq/"/>
-      <url>/2025/12/25/rabbitmq/</url>
-      
-        <content type="html"><![CDATA[<h3 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><h4 id="第一步：下载rabbitmq"><a href="#第一步：下载rabbitmq" class="headerlink" title="第一步：下载rabbitmq"></a>第一步：下载rabbitmq</h4><p>官网下载地址: <a href="https://www.rabbitmq.com/docs/install-windows">https://www.rabbitmq.com/docs/install-windows</a><br><img src="/medias/images/rabbitmq1.png" alt="官网地址"></p><h4 id="第二步-下载Erlang"><a href="#第二步-下载Erlang" class="headerlink" title="第二步: 下载Erlang"></a>第二步: 下载Erlang</h4><p>RabbitMQ需要安装64位受支持的Erlang版本 才能在Windows上运行。<br><img src="/medias/images/rabbitmq2.png" alt="下载页面"></p><h4 id="第三步：点击安装"><a href="#第三步：点击安装" class="headerlink" title="第三步：点击安装"></a>第三步：点击安装</h4><h5 id="1-先安装Erlang"><a href="#1-先安装Erlang" class="headerlink" title="1.先安装Erlang"></a>1.先安装Erlang</h5><ul><li>运行程序安装</li><li>配置环境变量</li></ul><p>配置ERLANG_HOME环境变量，其值指向erlang的安装目录（安装时可选择）<br><br>%ERLANG_HOME%\bin 加入到Path中</p><p>验证安装 cmd窗口 输入 </p><pre class="line-numbers language-none"><code class="language-none">erl -version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h5 id="2-安装rabbitmq-server"><a href="#2-安装rabbitmq-server" class="headerlink" title="2.安装rabbitmq-server"></a>2.安装rabbitmq-server</h5><p>注意，安装的路径都不要包含中文<br></p><ul><li>配置环境变量</li></ul><p>新建RABBITMQ_SERVER,指向安装路径，增加rabbitmq变量至path，%RABBITMQ_SERVER%\sbin</p><p>验证是否安装成功 运行以下命令 </p><pre class="line-numbers language-none"><code class="language-none">rabbitmqctl status<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h5 id="3-报错解决"><a href="#3-报错解决" class="headerlink" title="3.报错解决"></a>3.报错解决</h5><p>Error: unable to perform an operation on node ‘rabbit@DESKTOP-63FTMEF’. Please see diagnostics information and suggestions below.</p><ul><li>找到：C:\Windows\System32\config\systemprofile .erlang.cookie 这个文件和 C:\Users{用户名} .erlang.cookie 两个的值不一样 设置一样即可</li><li>重启 RabbitMQ 服务（Windows + R -&gt; services.msc -&gt; 找到 RabbitMQ -&gt; 右击重启）</li></ul><h5 id="4-扩展"><a href="#4-扩展" class="headerlink" title="4.扩展"></a>4.扩展</h5><p>切换到安装目录，安装可视化插件：</p><pre class="line-numbers language-none"><code class="language-none">rabbitmq-plugins.bat enable rabbitmq_management<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>浏览器中 <a href="http://localhost:15672/">http://localhost:15672</a></p><ul><li>用户和密码输入：guest,guest 进入rabbitMQ管理控制台</li></ul>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> RabbitMQ </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Nacos Server 下载与启动教程</title>
       <link href="/2025/12/25/nacos/"/>
       <url>/2025/12/25/nacos/</url>
@@ -76,6 +57,25 @@
         <tags>
             
             <tag> Nacos </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Window下安装RabbitMQ</title>
+      <link href="/2025/12/25/rabbitmq/"/>
+      <url>/2025/12/25/rabbitmq/</url>
+      
+        <content type="html"><![CDATA[<h3 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><h4 id="第一步：下载rabbitmq"><a href="#第一步：下载rabbitmq" class="headerlink" title="第一步：下载rabbitmq"></a>第一步：下载rabbitmq</h4><p>官网下载地址: <a href="https://www.rabbitmq.com/docs/install-windows">https://www.rabbitmq.com/docs/install-windows</a><br><img src="/medias/images/rabbitmq1.png" alt="官网地址"></p><h4 id="第二步-下载Erlang"><a href="#第二步-下载Erlang" class="headerlink" title="第二步: 下载Erlang"></a>第二步: 下载Erlang</h4><p>RabbitMQ需要安装64位受支持的Erlang版本 才能在Windows上运行。<br><img src="/medias/images/rabbitmq2.png" alt="下载页面"></p><h4 id="第三步：点击安装"><a href="#第三步：点击安装" class="headerlink" title="第三步：点击安装"></a>第三步：点击安装</h4><h5 id="1-先安装Erlang"><a href="#1-先安装Erlang" class="headerlink" title="1.先安装Erlang"></a>1.先安装Erlang</h5><ul><li>运行程序安装</li><li>配置环境变量</li></ul><p>配置ERLANG_HOME环境变量，其值指向erlang的安装目录（安装时可选择）<br><br>%ERLANG_HOME%\bin 加入到Path中</p><p>验证安装 cmd窗口 输入 </p><pre class="line-numbers language-none"><code class="language-none">erl -version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h5 id="2-安装rabbitmq-server"><a href="#2-安装rabbitmq-server" class="headerlink" title="2.安装rabbitmq-server"></a>2.安装rabbitmq-server</h5><p>注意，安装的路径都不要包含中文<br></p><ul><li>配置环境变量</li></ul><p>新建RABBITMQ_SERVER,指向安装路径，增加rabbitmq变量至path，%RABBITMQ_SERVER%\sbin</p><p>验证是否安装成功 运行以下命令 </p><pre class="line-numbers language-none"><code class="language-none">rabbitmqctl status<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h5 id="3-报错解决"><a href="#3-报错解决" class="headerlink" title="3.报错解决"></a>3.报错解决</h5><p>Error: unable to perform an operation on node ‘rabbit@DESKTOP-63FTMEF’. Please see diagnostics information and suggestions below.</p><ul><li>找到：C:\Windows\System32\config\systemprofile .erlang.cookie 这个文件和 C:\Users{用户名} .erlang.cookie 两个的值不一样 设置一样即可</li><li>重启 RabbitMQ 服务（Windows + R -&gt; services.msc -&gt; 找到 RabbitMQ -&gt; 右击重启）</li></ul><h5 id="4-扩展"><a href="#4-扩展" class="headerlink" title="4.扩展"></a>4.扩展</h5><p>切换到安装目录，安装可视化插件：</p><pre class="line-numbers language-none"><code class="language-none">rabbitmq-plugins.bat enable rabbitmq_management<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>浏览器中 <a href="http://localhost:15672/">http://localhost:15672</a></p><ul><li>用户和密码输入：guest,guest 进入rabbitMQ管理控制台</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> RabbitMQ </tag>
             
         </tags>
       

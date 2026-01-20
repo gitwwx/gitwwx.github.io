@@ -4,10 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Nacos Server 下载与启动教程, wwx&#39;s BLOG">
-    <meta name="description" content="安装步骤第一步：下载Nacos Server官网下载地址: 🔗 https://github.com/alibaba/nacos选择最新稳定版本（注意jdk版本适配），下载对应系统的压缩包：
-
-Windows：nacos-server-x">
+    <meta name="keywords" content="wwx&#39;s BLOG">
+    <meta name="description" content="wwx&#39;s BLOG">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +17,7 @@ Windows：nacos-server-x">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Nacos Server 下载与启动教程 | wwx&#39;s BLOG</title>
+    <title>wwx&#39;s BLOG</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -273,12 +271,12 @@ Windows：nacos-server-x">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Nacos Server 下载与启动教程</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -300,13 +298,9 @@ Windows：nacos-server-x">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Nacos/">
-                                <span class="chip bg-color">Nacos</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -318,7 +312,7 @@ Windows：nacos-server-x">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2025-12-25
+                    2026-01-20
                 </div>
                 
 
@@ -342,54 +336,7 @@ Windows：nacos-server-x">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><h4 id="第一步：下载Nacos-Server"><a href="#第一步：下载Nacos-Server" class="headerlink" title="第一步：下载Nacos Server"></a>第一步：下载Nacos Server</h4><p>官网下载地址: 🔗 <a target="_blank" rel="noopener" href="https://github.com/alibaba/nacos">https://github.com/alibaba/nacos</a><br>选择最新稳定版本（注意jdk版本适配），下载对应系统的压缩包：</p>
-<ul>
-<li>Windows：nacos-server-x.x.x.zip</li>
-<li>Linux&#x2F;macOS：nacos-server-x.x.x.tar.gz</li>
-</ul>
-<h4 id="第二步-解压文件"><a href="#第二步-解压文件" class="headerlink" title="第二步: 解压文件"></a>第二步: 解压文件</h4><pre class="line-numbers language-none"><code class="language-none"># Linux&#x2F;macOS
-tar -zxvf nacos-server-x.x.x.tar.gz
-
-# Windows
-直接右键解压<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="启动-Nacos-Server"><a href="#启动-Nacos-Server" class="headerlink" title="启动 Nacos Server"></a>启动 Nacos Server</h3><h5 id="1-单机模式启动（开发环境推荐）"><a href="#1-单机模式启动（开发环境推荐）" class="headerlink" title="1.单机模式启动（开发环境推荐）"></a>1.单机模式启动（开发环境推荐）</h5><p>Linux&#x2F;macOS</p>
-<pre class="line-numbers language-none"><code class="language-none">cd nacos&#x2F;bin
-sh startup.sh -m standalone  # 添加 standalone 参数表示单机模式<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>Windows</p>
-<pre class="line-numbers language-none"><code class="language-none">cd nacos\bin
-.&#x2F;startup.cmd -m standalone<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h5 id="2-集群模式启动（生产环境）"><a href="#2-集群模式启动（生产环境）" class="headerlink" title="2.集群模式启动（生产环境）"></a>2.集群模式启动（生产环境）</h5><p>修改配置文件 conf&#x2F;cluster.conf，添加集群节点IP：</p>
-<pre class="line-numbers language-none"><code class="language-none">192.168.1.101:8848
-192.168.1.102:8848
-192.168.1.103:8848<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>启动每个节点（无需 standalone 参数）</p>
-<pre class="line-numbers language-none"><code class="language-none">sh startup.sh  # Linux&#x2F;macOS
-startup.cmd    # Windows<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h3 id="验证启动"><a href="#验证启动" class="headerlink" title="验证启动"></a>验证启动</h3><p>访问控制台<br>浏览器打开：<br>🔗 <a target="_blank" rel="noopener" href="http://localhost:8848/nacos">http://localhost:8848/nacos</a></p>
-<ul>
-<li>默认账号：nacos</li>
-<li>默认密码：nacos</li>
-</ul>
-<p>查看日志</p>
-<pre class="line-numbers language-none"><code class="language-none">tail -f nacos&#x2F;logs&#x2F;start.out  # Linux&#x2F;macOS
-# Windows 直接查看 nacos\logs\start.out 文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h3 id="常见问题解决"><a href="#常见问题解决" class="headerlink" title="常见问题解决"></a>常见问题解决</h3><h4 id="1，端口冲突"><a href="#1，端口冲突" class="headerlink" title="1，端口冲突"></a>1，端口冲突</h4><p>修改 conf&#x2F;application.properties 中的端口：</p>
-<pre class="line-numbers language-properties" data-language="properties"><code class="language-properties"><span class="token key attr-name">server.port</span><span class="token punctuation">=</span><span class="token value attr-value">8848  # 默认端口，可改为其他</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="2-启动失败（内存不足）"><a href="#2-启动失败（内存不足）" class="headerlink" title="2.启动失败（内存不足）"></a>2.启动失败（内存不足）</h4><p>调整 JVM 参数（编辑 bin&#x2F;startup.sh 或 startup.cmd）：</p>
-<pre class="line-numbers language-none"><code class="language-none">JAVA_OPT&#x3D;&quot;$&#123;JAVA_OPT&#125; -Xms512m -Xmx512m&quot;  # 根据机器配置调整<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="3-外网访问限制"><a href="#3-外网访问限制" class="headerlink" title="3.外网访问限制"></a>3.外网访问限制</h4><p>修改 conf&#x2F;application.properties：</p>
-<pre class="line-numbers language-properties" data-language="properties"><code class="language-properties"><span class="token key attr-name">nacos.core.auth.enabled</span><span class="token punctuation">=</span><span class="token value attr-value">false  # 关闭鉴权（开发环境）</span>
-<span class="token key attr-name">nacos.inetutils.ip-address</span><span class="token punctuation">=</span><span class="token value attr-value">你的服务器IP  # 绑定外网IP</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h3 id="线上环境建议"><a href="#线上环境建议" class="headerlink" title="线上环境建议"></a>线上环境建议</h3><p>数据库持久化（默认使用内嵌 Derby，生产需切 MySQL） </p>
-<ul>
-<li>修改 conf&#x2F;application.properties：<pre class="line-numbers language-properties" data-language="properties"><code class="language-properties"><span class="token key attr-name">spring.datasource.platform</span><span class="token punctuation">=</span><span class="token value attr-value">mysql</span>
-<span class="token key attr-name">db.url.0</span><span class="token punctuation">=</span><span class="token value attr-value">jdbc:mysql://127.0.0.1:3306/nacos?useSSL=false</span>
-<span class="token key attr-name">db.user</span><span class="token punctuation">=</span><span class="token value attr-value">root</span>
-<span class="token key attr-name">db.password</span><span class="token punctuation">=</span><span class="token value attr-value">你的密码</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
-</ul>
-<h3 id="关闭Nacos-Server"><a href="#关闭Nacos-Server" class="headerlink" title="关闭Nacos Server"></a>关闭Nacos Server</h3><pre class="line-numbers language-none"><code class="language-none">sh shutdown.sh  # Linux&#x2F;macOS
-shutdown.cmd    # Windows<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+                google-site-verification: google4f4d4a3cc1d384e7.html
                 
             </div>
             <hr/>
@@ -415,7 +362,7 @@ shutdown.cmd    # Windows<span aria-hidden="true" class="line-numbers-rows"><spa
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://gitwwx.github.io/2025/12/25/nacos/">https://gitwwx.github.io/2025/12/25/nacos/</a>
+                    <a href="https://gitwwx.github.io/google4f4d4a3cc1d384e7.html">https://gitwwx.github.io/google4f4d4a3cc1d384e7.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -452,11 +399,7 @@ shutdown.cmd    # Windows<span aria-hidden="true" class="line-numbers-rows"><spa
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/Nacos/">
-                                    <span class="chip bg-color">Nacos</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -533,70 +476,18 @@ shutdown.cmd    # Windows<span aria-hidden="true" class="line-numbers-rows"><spa
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2025/12/26/sc-demo2/">
+                <a href="/google4f4d4a3cc1d384e7.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="SpringCloud微服务-Nacos + MQ">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">SpringCloud微服务-Nacos + MQ</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2025-12-26
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            W WX
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Nacos/">
-                        <span class="chip bg-color">Nacos</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">
-                        <span class="chip bg-color">微服务</span>
-                    </a>
-                    
-                    <a href="/tags/MQ/">
-                        <span class="chip bg-color">MQ</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2025/12/25/rabbitmq/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Window下安装RabbitMQ">
-                        
-                        <span class="card-title">Window下安装RabbitMQ</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -607,7 +498,7 @@ shutdown.cmd    # Windows<span aria-hidden="true" class="line-numbers-rows"><spa
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2025-12-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-01-20
                             </span>
                         <span class="publish-author">
                             
@@ -617,14 +508,45 @@ shutdown.cmd    # Windows<span aria-hidden="true" class="line-numbers-rows"><spa
                         </span>
                     </div>
                 </div>
+
                 
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/RabbitMQ/">
-                        <span class="chip bg-color">RabbitMQ</span>
-                    </a>
-                    
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/google4f4d4a3cc1d384e7.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-01-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            W WX
+                            
+                        </span>
+                    </div>
                 </div>
+
                 
             </div>
         </div>
