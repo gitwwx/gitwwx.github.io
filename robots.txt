@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gitwwx.github.io/sitemap.xml
