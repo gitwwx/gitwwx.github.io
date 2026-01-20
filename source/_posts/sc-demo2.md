@@ -242,7 +242,9 @@ Eureka 时代的负载均衡
 示例依赖传递路径：
 eureka-client → ribbon → ribbon-loadbalancer
 ```
+
 Spring Cloud 2020 后的变化
+
 * Ribbon 进入维护模式 Netflix 宣布 Ribbon 进入维护状态，Spring Cloud 逐步移除对 Ribbon 的默认依赖。
 * Spring Cloud LoadBalancer（SCL） Spring 官方推出了新的负载均衡器 spring-cloud-loadbalancer，成为默认实现（从 2020.0.x 开始）。
 
@@ -386,6 +388,6 @@ public class OrderApplication {
 4. * user-service
 4. * order-service
 ##### 3.2 测试验证
-  -  访问Nacos控制台(http://localhost:8848)查看服务注册情况
+  -  访问Nacos控制台(http://localhost:8848) 查看服务注册情况
   -  通过网关访问服务：GET http://localhost:9090/api/users/1
   -  测试消息队列：POST http://localhost:8083/orders

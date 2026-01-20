@@ -28,9 +28,15 @@ cd /data/tmp
 ```
 xshell非常好用，有时候想在windows和Linux上下载或上传文件可以通过配置然后使用rz和sz命令实现
 
-安装工具lrzsz通过yum install lrzsz实现
+```
+# CentOS安装工具lrzsz 
+yum install lrzsz
+# ubuntu安装工具
+sudo apt install lrzsz
+```
 上传文件，通过rz实现
-下载文件,通过sz实现
+
+下载文件，通过sz实现
 
 解压
 ```
