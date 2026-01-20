@@ -358,7 +358,12 @@ mkdir -p &amp;#x2F;">
 <h5 id="2，配置jdk环境"><a href="#2，配置jdk环境" class="headerlink" title="2，配置jdk环境"></a>2，配置jdk环境</h5><p>进入安装包目录</p>
 <pre class="line-numbers language-none"><code class="language-none">cd &#x2F;data&#x2F;tmp<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>xshell非常好用，有时候想在windows和Linux上下载或上传文件可以通过配置然后使用rz和sz命令实现</p>
-<p>安装工具lrzsz通过yum install lrzsz实现<br>上传文件，通过rz实现<br>下载文件,通过sz实现</p>
+<pre class="line-numbers language-none"><code class="language-none"># CentOS安装工具lrzsz 
+yum install lrzsz
+# ubuntu安装工具
+sudo apt install lrzsz<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>上传文件，通过rz实现</p>
+<p>下载文件，通过sz实现</p>
 <p>解压</p>
 <pre class="line-numbers language-none"><code class="language-none">tar -zxvf jdk-8u141-linux-x64.tar.gz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>把解压出来的文件夹转移到统一的地方</p>
@@ -899,7 +904,7 @@ location &#x2F;prod-api&#x2F; &#123;
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2025</span>
+                <span id="year">2019-2026</span>
             
             <a href="/about" target="_blank">W WX</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>

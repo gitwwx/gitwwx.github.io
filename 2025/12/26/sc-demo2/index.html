@@ -543,8 +543,10 @@ sh startup.sh -m standalone
 <p>Eureka 时代的负载均衡</p>
 <ul>
 <li>Netflix Ribbon（旧版默认） 在早期的 Spring Cloud 版本（如 Hoxton 及之前），当使用 Eureka 作为注册中心时，spring-cloud-starter-netflix-ribbon 会自动被间接引入（例如通过 spring-cloud-starter-netflix-eureka-client）<pre class="line-numbers language-none"><code class="language-none">示例依赖传递路径：
-eureka-client → ribbon → ribbon-loadbalancer<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-Spring Cloud 2020 后的变化</li>
+eureka-client → ribbon → ribbon-loadbalancer<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+</ul>
+<p>Spring Cloud 2020 后的变化</p>
+<ul>
 <li>Ribbon 进入维护模式 Netflix 宣布 Ribbon 进入维护状态，Spring Cloud 逐步移除对 Ribbon 的默认依赖。</li>
 <li>Spring Cloud LoadBalancer（SCL） Spring 官方推出了新的负载均衡器 spring-cloud-loadbalancer，成为默认实现（从 2020.0.x 开始）。</li>
 </ul>
@@ -682,7 +684,7 @@ spring:
 </li>
 </ol>
 <h5 id="3-2-测试验证"><a href="#3-2-测试验证" class="headerlink" title="3.2 测试验证"></a>3.2 测试验证</h5><ul>
-<li>访问Nacos控制台(<a href="http://localhost:8848)查看服务注册情况">http://localhost:8848)查看服务注册情况</a></li>
+<li>访问Nacos控制台(<a target="_blank" rel="noopener" href="http://localhost:8848/">http://localhost:8848</a>) 查看服务注册情况</li>
 <li>通过网关访问服务：GET <a target="_blank" rel="noopener" href="http://localhost:9090/api/users/1">http://localhost:9090/api/users/1</a></li>
 <li>测试消息队列：POST <a target="_blank" rel="noopener" href="http://localhost:8083/orders">http://localhost:8083/orders</a></li>
 </ul>
@@ -838,18 +840,17 @@ spring:
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2025/12/26/sc-demo2/">
+                <a href="/2025/12/30/jmeter/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="SpringCloud微服务-Nacos + MQ">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="JMeter安装使用教程">
                         
-                        <span class="card-title">SpringCloud微服务-Nacos + MQ</span>
+                        <span class="card-title">JMeter安装使用教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -859,9 +860,9 @@ spring:
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2025-12-26
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2025-12-30
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -870,20 +871,11 @@ spring:
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Nacos/">
-                        <span class="chip bg-color">Nacos</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">
-                        <span class="chip bg-color">微服务</span>
-                    </a>
-                    
-                    <a href="/tags/MQ/">
-                        <span class="chip bg-color">MQ</span>
+                    <a href="/tags/JMeter/">
+                        <span class="chip bg-color">JMeter</span>
                     </a>
                     
                 </div>
@@ -1117,7 +1109,7 @@ spring:
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2025</span>
+                <span id="year">2019-2026</span>
             
             <a href="/about" target="_blank">W WX</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
