@@ -32,6 +32,7 @@ skip_render:
   - "robots.txt"      # 跳过 robots.txt
   - "google4f4d4a3cc1d384e7.html"
   - "sitemap.xml"
+  - "BingSiteAuth.xml"
 
 # Writing
 new_post_name: :title.md # File name of new posts
